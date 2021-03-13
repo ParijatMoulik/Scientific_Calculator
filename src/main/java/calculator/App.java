@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 
 public class App {
     private static final Logger logger = LogManager.getLogger(App.class);
+    private Utils utils = new Utils();
     private double result = 0.0;
     private double num1=0.0;
     private double num2=0.0;
@@ -33,28 +34,6 @@ public class App {
     private JButton sqrt;
     private JButton equal;
 
-    double SquareRoot(double a) {
-        logger.info("[SQUAREROOT] - " + a);
-        double res =Math.sqrt(a);
-        logger.info("[RESULT - SQUAREROOT] - " + res);
-        return res;
-    }
-    double Factorial(double a) {
-
-        return (a == 1 || a == 0) ? 1 : a * Factorial(a - 1);
-    }
-    double Logarithm(double a) {
-        logger.info("[LOGARITHM] - " + a);
-        double res =Math.log(a);
-        logger.info("[RESULT - LOGARITHM] - " + res);
-        return res;
-    }
-    double Power(double a, double b) {
-        logger.info("[POWER] - " + a + " "+b);
-        double res =Math.pow(a,b);
-        logger.info("[RESULT - POWER] - " + res);
-        return res;
-    }
     public App() {
 
         one.addActionListener(new ActionListener() {
@@ -153,22 +132,28 @@ public class App {
                 switch (choice)
                 {
                     case 1:
-                        result = SquareRoot(num1);
+                        logger.info("[SQUAREROOT] - " + num1);
+                        result = utils.SquareRoot(num1);
+                        logger.info("[SQUAREROOT - RESULT] - " + result);
                         num1 = 0.0;
                         break;
                     case 2:
-                        result = Logarithm(num1);
+                        logger.info("[LOGARITHM] - " + num1);
+                        result = utils.Logarithm(num1);
+                        logger.info("[LOGARITHM - RESULT] - " + result);
                         num1 = 0.0;
                         break;
                     case 3:
                         logger.info("[FACTORIAL] - " + num1);
-                        result = Factorial(num1);
+                        result = utils.Factorial(num1);
                         logger.info("[FACTORIAL - RESULT] - " + result);
                         num1=0.0;
                         break;
                     case 4:
                         num2 = Double.parseDouble(textDisplay.getText());
-                        result = Power(num1, num2);
+                        logger.info("[POWER] - " + num1 + " "+ num2);
+                        result = utils.Power(num1, num2);
+                        logger.info("[RESULT - POWER] - " + result);
                         num1 = 0.0;
                         num2 = 0.0;
                         break;
