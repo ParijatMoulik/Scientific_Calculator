@@ -2,3 +2,6 @@
 13/Mar/2021:13:00:29 718 [App.java] [INFO] calculator.App [RESULT - SQUAREROOT] - 3.0
 13/Mar/2021:13:00:58 570 [App.java] [INFO] calculator.App [POWER] - 3.0 3.0
 13/Mar/2021:13:00:58 571 [App.java] [INFO] calculator.App [RESULT - POWER] - 27.0
+13/Mar/2021:20:49:12 584 [App.java] [INFO] calculator.App [FACTORIAL] - 7.5
+13/Mar/2021:20:49:36 801 [App.java] [INFO] calculator.App [FACTORIAL] - 7.0
+13/Mar/2021:20:49:36 802 [App.java] [INFO] calculator.App [FACTORIAL - RESULT] - 5040.0

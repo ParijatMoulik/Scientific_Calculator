@@ -130,13 +130,6 @@ public class App {
         decimal.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                String Text = textDisplay.getText()+decimal.getText();
-                textDisplay.setText(Text);
-            }
-        });
-        decimal.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
                 if(textDisplay.getText().equals("")){
                     textDisplay.setText("0");
                 }
@@ -146,7 +139,7 @@ public class App {
                 else
                 {
                     String decimalText = textDisplay.getText() + decimal.getText();
-                        textDisplay.setText(decimalText);
+                    textDisplay.setText(decimalText);
                 }
                 decimal.setEnabled(true);
             }
@@ -160,20 +153,22 @@ public class App {
                 switch (choice)
                 {
                     case 1:
-                        result = Math.sqrt(num1);
+                        result = SquareRoot(num1);
                         num1 = 0.0;
                         break;
                     case 2:
-                        result = Math.log(num1);
+                        result = Logarithm(num1);
                         num1 = 0.0;
                         break;
                     case 3:
-                        result = findFact(num1);
+                        logger.info("[FACTORIAL] - " + num1);
+                        result = Factorial(num1);
+                        logger.info("[FACTORIAL - RESULT] - " + result);
                         num1=0.0;
                         break;
                     case 4:
                         num2 = Double.parseDouble(textDisplay.getText());
-                        result = Math.pow(num1,num2);
+                        result = Power(num1, num2);
                         num1 = 0.0;
                         num2 = 0.0;
                         break;
