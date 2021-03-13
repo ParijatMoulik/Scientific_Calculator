@@ -75,3 +75,27 @@
 13/Mar/2021:21:06:45 331 [App.java] [INFO] calculator.App [RESULT - LOGARITHM] - 2.302585092994046
 13/Mar/2021:21:06:45 332 [App.java] [INFO] calculator.App [LOGARITHM] - 3.14
 13/Mar/2021:21:06:45 332 [App.java] [INFO] calculator.App [RESULT - LOGARITHM] - 1.144222799920162
+13/Mar/2021:21:09:46 912 [App.java] [INFO] calculator.App [SQUAREROOT] - 4.0
+13/Mar/2021:21:09:46 916 [App.java] [INFO] calculator.App [RESULT - SQUAREROOT] - 2.0
+13/Mar/2021:21:09:46 917 [App.java] [INFO] calculator.App [SQUAREROOT] - 1.6
+13/Mar/2021:21:09:46 917 [App.java] [INFO] calculator.App [RESULT - SQUAREROOT] - 1.2649110640673518
+13/Mar/2021:21:09:46 925 [App.java] [INFO] calculator.App [SQUAREROOT] - 4.0
+13/Mar/2021:21:09:46 926 [App.java] [INFO] calculator.App [RESULT - SQUAREROOT] - 2.0
+13/Mar/2021:21:09:46 926 [App.java] [INFO] calculator.App [SQUAREROOT] - 1.6
+13/Mar/2021:21:09:46 927 [App.java] [INFO] calculator.App [RESULT - SQUAREROOT] - 1.2649110640673518
+13/Mar/2021:21:09:46 935 [App.java] [INFO] calculator.App [LOGARITHM] - 10.0
+13/Mar/2021:21:09:46 935 [App.java] [INFO] calculator.App [RESULT - LOGARITHM] - 2.302585092994046
+13/Mar/2021:21:09:46 936 [App.java] [INFO] calculator.App [LOGARITHM] - 3.14
+13/Mar/2021:21:09:46 936 [App.java] [INFO] calculator.App [RESULT - LOGARITHM] - 1.144222799920162
+13/Mar/2021:21:09:46 958 [App.java] [INFO] calculator.App [POWER] - 2.0 2.0
+13/Mar/2021:21:09:46 958 [App.java] [INFO] calculator.App [RESULT - POWER] - 4.0
+13/Mar/2021:21:09:46 959 [App.java] [INFO] calculator.App [POWER] - 2.1 3.2
+13/Mar/2021:21:09:46 959 [App.java] [INFO] calculator.App [RESULT - POWER] - 10.74241047739471
+13/Mar/2021:21:09:46 965 [App.java] [INFO] calculator.App [POWER] - 2.0 2.0
+13/Mar/2021:21:09:46 966 [App.java] [INFO] calculator.App [RESULT - POWER] - 4.0
+13/Mar/2021:21:09:46 966 [App.java] [INFO] calculator.App [POWER] - 2.2 3.0
+13/Mar/2021:21:09:46 966 [App.java] [INFO] calculator.App [RESULT - POWER] - 10.648000000000003
+13/Mar/2021:21:09:46 972 [App.java] [INFO] calculator.App [LOGARITHM] - 10.0
+13/Mar/2021:21:09:46 973 [App.java] [INFO] calculator.App [RESULT - LOGARITHM] - 2.302585092994046
+13/Mar/2021:21:09:46 973 [App.java] [INFO] calculator.App [LOGARITHM] - 3.14
+13/Mar/2021:21:09:46 973 [App.java] [INFO] calculator.App [RESULT - LOGARITHM] - 1.144222799920162
