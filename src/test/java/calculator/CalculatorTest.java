@@ -1,3 +1,65 @@
+//package calculator;
+//
+//import static org.junit.Assert.*;
+//
+//import org.junit.*;
+//
+//public class CalculatorTest {
+//    private static final double DELTA = 1e-15;
+//    private App calculator = new App();
+//
+//    @Test
+//    public void powerTruePositive(){
+//        assertEquals("Power of integer numbers for True Positive", 4, calculator.Power(2, 2), DELTA);
+//        assertEquals("Power of double numbers for True Positive", 10.648000000000003, calculator.Power(2.2, 3), DELTA);
+//    }
+//
+//    @Test
+//    public void powerFalsePositive(){
+//        assertNotEquals("Power of two integer numbers for False Positive", 6, calculator.Power(2, 2), DELTA);
+//        assertNotEquals("Power of two double numbers for False Positive", 7.3, calculator.Power(2.1, 3.2), DELTA);
+//    }
+//
+//    @Test
+//    public void logTruePositive(){
+//        assertEquals("Subtracting two integer numbers for True Positive", 2.302585092994046, calculator.Logarithm(10), DELTA);
+//        assertEquals("Subtracting two double numbers for True Positive", 1.144222799920162, calculator.Logarithm(3.14), DELTA);
+//    }
+//
+//    @Test
+//    public void logFalsePositive(){
+//        assertNotEquals("Subtracting two integer numbers for False Positive", 6, calculator.Logarithm(10), DELTA);
+//        assertNotEquals("Subtracting two double numbers for False Positive", -7.3, calculator.Logarithm(3.14), DELTA);
+//    }
+//
+//    @Test
+//    public void squareRootTruePositive(){
+//        assertEquals("Multiplying two integer numbers for True Positive", 2, calculator.SquareRoot(4), DELTA);
+//        assertEquals("Multiplying two double numbers for True Positive", 1.2649110640673518, calculator.SquareRoot(1.6), DELTA);
+//    }
+//
+//    @Test
+//    public void squareRootFalsePositive(){
+//        assertNotEquals("Multiplying two integer numbers for False Positive", 6, calculator.SquareRoot(4), DELTA);
+//        assertNotEquals("Multiplying two double numbers for False Positive", 7.3, calculator.SquareRoot(1.6), DELTA);
+//    }
+//
+//    @Test
+//    public void factorialTruePositive(){
+//        assertEquals("Dividing two integer numbers for True Positive", 2, calculator.Factorial(2), DELTA);
+//        // assertEquals("Dividing two double numbers for True Positive", 14034.407, calculator.Factorial(7.5), DELTA);
+//    }
+//
+//    @Test
+//    public void factorialFalsePositive(){
+//        assertNotEquals("Dividing two integer numbers for True Positive", 1, calculator.Factorial(2), DELTA);
+//        // assertNotEquals("Dividing two double numbers for True Positive", 0, calculator.divide(7.5), DELTA);
+//    }
+//
+//
+//}
+
+
 package calculator;
 
 import static org.junit.Assert.*;
@@ -5,56 +67,52 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 public class CalculatorTest {
-    private static final double DELTA = 1e-15;
-    private App calculator = new App();
 
-    @Test
-    public void powerTruePositive(){
-        assertEquals("Power of integer numbers for True Positive", 4, calculator.Power(2, 2), DELTA);
-        assertEquals("Power of double numbers for True Positive", 10.648000000000003, calculator.Power(2.2, 3), DELTA);
+    private App calculator;
+
+    @Before
+    public void setUp() {
+        calculator = new App();
     }
 
     @Test
-    public void powerFalsePositive(){
-        assertNotEquals("Power of two integer numbers for False Positive", 6, calculator.Power(2, 2), DELTA);
-        assertNotEquals("Power of two double numbers for False Positive", 7.3, calculator.Power(2.1, 3.2), DELTA);
+    public void testSquareRoot() {
+        double a = 9.0;
+
+        double expectedResult = 3.0;
+        double result = calculator.SquareRoot(a);
+        Assert.assertEquals(expectedResult, result, 0);
     }
 
     @Test
-    public void logTruePositive(){
-        assertEquals("Subtracting two integer numbers for True Positive", 2.302585092994046, calculator.Logarithm(10), DELTA);
-        assertEquals("Subtracting two double numbers for True Positive", 1.144222799920162, calculator.Logarithm(3.14), DELTA);
+    public void testFactorial() {
+        double a = 3;
+        double expectedResult = 6;
+        double result = calculator.Factorial(a);
+        Assert.assertEquals(expectedResult, result, 0);
     }
 
     @Test
-    public void logFalsePositive(){
-        assertNotEquals("Subtracting two integer numbers for False Positive", 6, calculator.Logarithm(10), DELTA);
-        assertNotEquals("Subtracting two double numbers for False Positive", -7.3, calculator.Logarithm(3.14), DELTA);
+    public void testLogarithm() {
+        double a = 1;
+        double expectedResult = 0;
+        double result = calculator.Logarithm(a);
+        Assert.assertEquals(expectedResult, result, 0);
     }
 
     @Test
-    public void squareRootTruePositive(){
-        assertEquals("Multiplying two integer numbers for True Positive", 2, calculator.SquareRoot(4), DELTA);
-        assertEquals("Multiplying two double numbers for True Positive", 1.2649110640673518, calculator.SquareRoot(1.6), DELTA);
+    public void testPower() {
+        double a = 2;
+        double b = 2;
+        double expectedResult = 4.0;
+        double result = calculator.Power(a, b);
+        Assert.assertEquals(expectedResult, result, 0.0001);
     }
 
-    @Test
-    public void squareRootFalsePositive(){
-        assertNotEquals("Multiplying two integer numbers for False Positive", 6, calculator.SquareRoot(4), DELTA);
-        assertNotEquals("Multiplying two double numbers for False Positive", 7.3, calculator.SquareRoot(1.6), DELTA);
-    }
-
-    @Test
-    public void factorialTruePositive(){
-        assertEquals("Dividing two integer numbers for True Positive", 2, calculator.Factorial(2), DELTA);
-        // assertEquals("Dividing two double numbers for True Positive", 14034.407, calculator.Factorial(7.5), DELTA);
-    }
-
-    @Test
-    public void factorialFalsePositive(){
-        assertNotEquals("Dividing two integer numbers for True Positive", 1, calculator.Factorial(2), DELTA);
-        // assertNotEquals("Dividing two double numbers for True Positive", 0, calculator.divide(7.5), DELTA);
-    }
-
-
+//		@Test(expected = IllegalArgumentException.class)
+//	    public void testDivideByZero() {
+//	        int a = 25;
+//	        int b = 0;
+//	        calculator.Power(a, b);
+//	    }
 }
