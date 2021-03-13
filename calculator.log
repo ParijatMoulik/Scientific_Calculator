@@ -107,3 +107,5 @@
 13/Mar/2021:23:00:38 094 [App.java] [INFO] calculator.App [RESULT - LOGARITHM] - 2.0794415416798357
 13/Mar/2021:23:00:42 608 [App.java] [INFO] calculator.App [POWER] - 2.0794415416798357 2.0
 13/Mar/2021:23:00:42 609 [App.java] [INFO] calculator.App [RESULT - POWER] - 4.324077125263812
+14/Mar/2021:00:02:24 674 [App.java] [INFO] calculator.App [FACTORIAL] - 3.0
+14/Mar/2021:00:02:24 680 [App.java] [INFO] calculator.App [FACTORIAL - RESULT] - 6.0
