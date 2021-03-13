@@ -11,7 +11,7 @@ public class CalculatorTest {
     @Test
     public void powerTruePositive(){
         assertEquals("Power of integer numbers for True Positive", 4, calculator.Power(2, 2), DELTA);
-        assertEquals("Power of double numbers for True Positive", 10.648, calculator.Power(2.2, 3), DELTA);
+        assertEquals("Power of double numbers for True Positive", 10.648000000000003, calculator.Power(2.2, 3), DELTA);
     }
 
     @Test
@@ -22,8 +22,8 @@ public class CalculatorTest {
 
     @Test
     public void logTruePositive(){
-        assertEquals("Subtracting two integer numbers for True Positive", 2.302, calculator.Logarithm(10), DELTA);
-        assertEquals("Subtracting two double numbers for True Positive", 1.442, calculator.Logarithm(3.14), DELTA);
+        assertEquals("Subtracting two integer numbers for True Positive", 2.302585092994046, calculator.Logarithm(10), DELTA);
+        assertEquals("Subtracting two double numbers for True Positive", 1.144222799920162, calculator.Logarithm(3.14), DELTA);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class CalculatorTest {
     @Test
     public void squareRootTruePositive(){
         assertEquals("Multiplying two integer numbers for True Positive", 2, calculator.SquareRoot(4), DELTA);
-        assertEquals("Multiplying two double numbers for True Positive", 0.8, calculator.SquareRoot(1.6), DELTA);
+        assertEquals("Multiplying two double numbers for True Positive", 1.2649110640673518, calculator.SquareRoot(1.6), DELTA);
     }
 
     @Test
